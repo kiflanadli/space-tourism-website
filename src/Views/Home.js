@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heading1, Heading5 } from "../Components/Headings";
 import { BodyText } from "../Components/Texts";
+import data from "../data.json";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         </BodyText>
       </div>
       <div>
-        <Link to="/destination">
+        <Link to={`/${Object.keys(data)[0]}`}>
           <button className="rounded-full bg-white w-[45%] aspect-square text-black-russian uppercase text-xl tracking-[0.063rem] font-bellefair">
             Explore
           </button>

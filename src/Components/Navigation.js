@@ -23,7 +23,3 @@ export function MainNavigation() {
     </nav>
   );
 }
-
-export function SubNavigation() {
-  return <nav></nav>;
-}

@@ -1,7 +1,8 @@
 import NavList from "./NavList";
+import data from "../data.json";
 
 export default function NavigationMenu({ closeMenu }) {
-  const links = ["home", "destination", "crew", "technology"];
+  const links = ["home", ...Object.keys(data)];
 
   return (
     <div>
@@ -15,10 +16,11 @@ export default function NavigationMenu({ closeMenu }) {
         <NavList
           links={links}
           linkPath="/"
-          listClass="mb-4 hover:border-r-2 py-1"
+          listClass="mb-4 border-r-2 border-transparent hover:border-white-500 py-1"
           handleClick={closeMenu}
           indexIcon
           textClass="text-base tracking-base md:max-lg:text-sm md:max-lg:tracking-sm"
+          activeClass="border-white"
         />
       </div>
     </div>
