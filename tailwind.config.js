@@ -22,6 +22,10 @@ module.exports = {
       colors: {
         "black-russian": "#0b0d17",
         quartz: "#d0d6f9",
+        white: {
+          DEFAULT: "#fff",
+          500: "rgba(255, 255, 255, 0.5)",
+        },
       },
       fontFamily: {
         bellefair: ['"Bellefair"', "serif"],
