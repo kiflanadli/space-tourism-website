@@ -7,7 +7,7 @@ export default function NavigationMenu({ closeMenu }) {
   return (
     <div>
       <div className="fixed z-50 inset-0" onClick={closeMenu}></div>
-      <div className="w-2/3 min-h-screen bg-gray-600/30 backdrop-blur-md fixed z-50 top-0 right-0 pl-6 pt-10">
+      <div className="w-2/3 min-h-screen bg-gray-600/30 backdrop-blur-2xl fixed z-50 top-0 right-0 pl-6 pt-10">
         <div className="text-right mb-12 mr-6">
           <button className="font-base" onClick={closeMenu}>
             <img src="/assets/shared/icon-close.svg" alt="close" />
