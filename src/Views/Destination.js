@@ -12,7 +12,7 @@ export default function Destination() {
   const captions = destinations.map((d) => d.name);
 
   return (
-    <div className="text-center">
+    <div className="text-center p-6 pt-20 min-h-screen bg-no-repeat bg-cover bg-destination-mobile sm:bg-destination-tablet md:bg-destination-desktop">
       <Heading5>
         <span className="opacity-50 font-bold mr-5">01</span>pick your
         destination
@@ -24,25 +24,27 @@ export default function Destination() {
           </Route>
         ))}
       </Switch>
+      <div>
+        <nav>
+          <NavList
+            links={links}
+            linkPath="/destinations/"
+            captions={captions}
+            className="flex gap-5 justify-center mb-4"
+            listClass="border-transparent border-b-[3px] hover:border-white-500 pb-2"
+            activeClass="border-white"
+            textClass="text-sm tracking-sm"
+          />
+        </nav>
 
-      <nav>
-        <NavList
-          links={links}
-          linkPath="/destinations/"
-          captions={captions}
-          className="flex gap-5 justify-center"
-          listClass="border-transparent border-b-2 hover:border-white-500"
-          activeClass="border-white"
-        />
-      </nav>
-
-      <Switch>
-        {destinations.map((d, index) => (
-          <Route path={`/destinations/${index}`} key={index}>
-            <DestinationBody destination={d} destinationId={index} />
-          </Route>
-        ))}
-      </Switch>
+        <Switch>
+          {destinations.map((d, index) => (
+            <Route path={`/destinations/${index}`} key={index}>
+              <DestinationBody destination={d} destinationId={index} />
+            </Route>
+          ))}
+        </Switch>
+      </div>
     </div>
   );
 }

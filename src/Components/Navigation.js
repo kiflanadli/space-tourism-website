@@ -6,7 +6,7 @@ export function MainNavigation() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="font-barlow-condensed sticky top-6 right-0 left-0 z-40 w-full flex justify-between items-center">
+    <nav className="font-barlow-condensed fixed top-0 p-6 z-40 w-full flex justify-between items-center">
       <Link to="/">
         <div>
           <img

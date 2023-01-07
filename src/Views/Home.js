@@ -5,7 +5,7 @@ import data from "../data.json";
 
 export default function Home() {
   return (
-    <div className="text-center flex flex-col justify-around min-h-[80vh]">
+    <div className="text-center flex flex-col justify-around min-h-screen p-6 pt-20 bg-no-repeat bg-cover bg-home-mobile sm:bg-home-tablet md:bg-home-desktop">
       <div>
         <Heading5>So, you want to travel to</Heading5>
         <Heading1>Space</Heading1>

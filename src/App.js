@@ -9,16 +9,18 @@ import { MainNavigation } from "./Components/Navigation";
 import Destination from "./Views/Destination";
 import Home from "./Views/Home";
 import data from "./data.json";
+import Technology from "./Views/Technology";
+import Crew from "./Views/Crew";
 
 function App() {
   return (
-    <div className="box-border font-barlow text-white uppercase min-h-screen p-6 bg-no-repeat bg-cover bg-home-mobile sm:bg-home-tablet md:bg-home-desktop">
+    <div className="box-border font-barlow text-white uppercase min-h-screen">
       <Router>
         <Switch>
           <Route path="/" exact children={<MainNavigation />} />
           <Route path="/:page" children={<MainNavigation />} />
         </Switch>
-        <main className="mt-7">
+        <main>
           <Switch>
             <Route path="/" exact>
               <Home />
@@ -47,10 +49,10 @@ function RenderMain() {
       content = <Destination />;
       break;
     case "crew":
-      content = "crew";
+      content = <Crew />;
       break;
     case "technology":
-      content = "technology";
+      content = <Technology />;
       break;
     default:
       content = "404 not found";
