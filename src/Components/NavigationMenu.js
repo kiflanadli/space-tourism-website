@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import NavList from "./NavList";
 
 export default function NavigationMenu({ closeMenu }) {
   const links = ["home", "destination", "crew", "technology"];
@@ -12,20 +12,14 @@ export default function NavigationMenu({ closeMenu }) {
             <img src="/assets/shared/icon-close.svg" alt="close" />
           </button>
         </div>
-        <ul>
-          {links.map((link, key) => (
-            <li key={key} className="mb-4 hover:border-r-2 py-1">
-              <Link onClick={closeMenu} to={link === "home" ? "/" : `/${link}`}>
-                <div>
-                  <span className="font-bold mr-2 min-w-[1.3em] inline-block">
-                    0{key}
-                  </span>
-                  {link}
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <NavList
+          links={links}
+          linkPath="/"
+          listClass="mb-4 hover:border-r-2 py-1"
+          handleClick={closeMenu}
+          indexIcon
+          textClass="text-base tracking-base md:max-lg:text-sm md:max-lg:tracking-sm"
+        />
       </div>
     </div>
   );

@@ -2,14 +2,18 @@ import NavigationMenu from "./NavigationMenu";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Navigation() {
+export function MainNavigation() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="p-6 font-barlow-condensed font-base tracking-base fixed top-0 right-0 left-0 z-40 w-full flex justify-between items-center">
+    <nav className="font-barlow-condensed sticky top-6 right-0 left-0 z-40 w-full flex justify-between items-center">
       <Link to="/">
         <div>
-          <img src="/assets/shared/logo.svg" alt="logo" />
+          <img
+            src="/assets/shared/logo.svg"
+            alt="logo"
+            className="w-[2.5rem]"
+          />
         </div>
       </Link>
       <button onClick={() => setShowMenu(!showMenu)}>
@@ -18,4 +22,8 @@ export default function Navigation() {
       {showMenu && <NavigationMenu closeMenu={() => setShowMenu(false)} />}
     </nav>
   );
+}
+
+export function SubNavigation() {
+  return <nav></nav>;
 }
