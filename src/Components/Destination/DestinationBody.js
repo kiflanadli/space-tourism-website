@@ -6,8 +6,8 @@ export default function DestinationBody({ destination }) {
     <>
       <Heading2>{destination.name}</Heading2>
       <BodyText>{destination.description}</BodyText>
-      <hr className="my-8 border-[#383b4b]" />
-      <div className="flex flex-col gap-5">
+      <hr className="my-9 border-[#383b4b]" />
+      <div className="flex flex-col gap-9">
         <div>
           <SubHeading2>avg. distance</SubHeading2>
           <SubHeading1>{destination.distance}</SubHeading1>
