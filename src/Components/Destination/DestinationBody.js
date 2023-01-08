@@ -1,7 +1,7 @@
 import { Heading2, SubHeading1, SubHeading2 } from "../Headings";
 import { BodyText } from "../Texts";
 
-export default function DestinationBody({ destination }) {
+export default function DestinationBody({ details: destination }) {
   return (
     <>
       <Heading2>{destination.name}</Heading2>

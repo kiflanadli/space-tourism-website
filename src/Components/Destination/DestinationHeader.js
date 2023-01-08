@@ -1,4 +1,4 @@
-export default function DestinationHeader({ destination }) {
+export default function DestinationHeader({ details: destination }) {
   return (
     <div>
       <img

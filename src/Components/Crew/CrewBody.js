@@ -1,7 +1,7 @@
 import { Heading3, Heading4 } from "../Headings";
 import { BodyText } from "../Texts";
 
-export default function CrewBody({ crew }) {
+export default function CrewBody({ details: crew }) {
   return (
     <div className="my-9">
       <div className="text-white-500 mb-1">

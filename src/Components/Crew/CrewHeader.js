@@ -1,4 +1,4 @@
-export default function CrewHeader({ crew }) {
+export default function CrewHeader({ details: crew }) {
   return (
     <div className="my-9 h-[40vh]">
       <img

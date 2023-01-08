@@ -1,6 +1,6 @@
 import { useWindowDimensions } from "../../Hooks/useWindowDimensions";
 
-export default function TechnologyHeader({ technology }) {
+export default function TechnologyHeader({ details: technology }) {
   const { width } = useWindowDimensions();
   let imgUrl =
     width > 1024
