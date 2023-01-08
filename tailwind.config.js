@@ -24,6 +24,7 @@ module.exports = {
         quartz: "#d0d6f9",
         white: {
           DEFAULT: "#fff",
+          200: "rgba(255, 255, 255, 0.2)",
           500: "rgba(255, 255, 255, 0.5)",
         },
       },
