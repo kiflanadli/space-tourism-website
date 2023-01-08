@@ -17,15 +17,15 @@ export default function NavList(props) {
   return (
     <ul className={className}>
       {links.map((link, index) => (
-        <li
+        <Link
           key={index}
-          className={`${listClass} ${
-            activeLink === link || page === link ? activeClass : ""
-          }`}
+          onClick={handleClick}
+          to={link === "home" ? "/" : `${linkPath}${link}`}
         >
-          <Link
-            onClick={handleClick}
-            to={link === "home" ? "/" : `${linkPath}${link}`}
+          <li
+            className={`${listClass} ${
+              activeLink === link || page === link ? activeClass : ""
+            }`}
           >
             <p className={`font-barlow-condensed ${textClass}`}>
               {indexIcon && (
@@ -35,8 +35,8 @@ export default function NavList(props) {
               )}
               {captions[index] || link}
             </p>
-          </Link>
-        </li>
+          </li>
+        </Link>
       ))}
     </ul>
   );
