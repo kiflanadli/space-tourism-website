@@ -1,12 +1,9 @@
 import NavList from "../Components/NavList";
 import TechnologyHeader from "../Components/Technology/TechnologyHeader";
 import TechnologyBody from "../Components/Technology/TechnologyBody";
-import data from "../data.json";
 import PageContainer from "../Components/PageContainer";
 
-export default function Technology() {
-  const technology = data.technology;
-
+export default function Technology({ mainData: { technology } }) {
   const links = Object.keys(technology);
   const captions = technology.map((d, index) => (
     <span

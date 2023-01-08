@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { Heading1, Heading5 } from "../Components/Headings";
 import { BodyText } from "../Components/Texts";
-import data from "../data.json";
 
-export default function Home() {
+export default function Home({ pageList }) {
   return (
     <div className="text-center flex flex-col justify-around min-h-screen p-6 pt-20 bg-no-repeat bg-cover bg-home-mobile sm:bg-home-tablet md:bg-home-desktop">
       <div>
@@ -17,7 +16,7 @@ export default function Home() {
         </BodyText>
       </div>
       <div>
-        <Link to={`/${Object.keys(data)[0]}`}>
+        <Link to={`/${pageList[0]}`}>
           <button className="rounded-full bg-white w-[45%] aspect-square text-black-russian uppercase text-xl tracking-[0.063rem] font-bellefair">
             Explore
           </button>

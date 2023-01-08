@@ -1,8 +1,7 @@
 import NavList from "./NavList";
-import data from "../data.json";
 
-export default function NavigationMenu({ closeMenu }) {
-  const links = ["home", ...Object.keys(data)];
+export default function NavigationMenu({ closeMenu, pageList }) {
+  const links = ["home", ...pageList];
 
   return (
     <div>

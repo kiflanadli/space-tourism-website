@@ -2,7 +2,7 @@ import NavigationMenu from "./NavigationMenu";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export function MainNavigation() {
+export function MainNavigation({ pageList }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -19,7 +19,12 @@ export function MainNavigation() {
       <button onClick={() => setShowMenu(!showMenu)}>
         <img src="/assets/shared/icon-hamburger.svg" alt="logo" />
       </button>
-      {showMenu && <NavigationMenu closeMenu={() => setShowMenu(false)} />}
+      {showMenu && (
+        <NavigationMenu
+          closeMenu={() => setShowMenu(false)}
+          pageList={pageList}
+        />
+      )}
     </nav>
   );
 }

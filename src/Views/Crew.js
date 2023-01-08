@@ -1,12 +1,9 @@
 import NavList from "../Components/NavList";
 import CrewHeader from "../Components/Crew/CrewHeader";
 import CrewBody from "../Components/Crew/CrewBody";
-import data from "../data.json";
 import PageContainer from "../Components/PageContainer";
 
-export default function Crew() {
-  const crew = data.crew;
-
+export default function Crew({ mainData: { crew } }) {
   const links = Object.keys(crew);
   const captions = crew.map((d) => (
     <span className="w-2.5 lg:w-4 aspect-square block"></span>

@@ -1,12 +1,9 @@
 import NavList from "../Components/NavList";
 import DestinationHeader from "../Components/Destination/DestinationHeader";
 import DestinationBody from "../Components/Destination/DestinationBody";
-import data from "../data.json";
 import PageContainer from "../Components/PageContainer";
 
-export default function Destination() {
-  const destinations = data.destinations;
-
+export default function Destination({ mainData: { destinations } }) {
   const links = Object.keys(destinations);
   const captions = destinations.map((d) => d.name);
 
