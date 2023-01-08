@@ -31,8 +31,8 @@ export default function Destination() {
             linkPath="/destinations/"
             captions={captions}
             className="flex gap-5 justify-center mb-9"
-            listClass="border-transparent border-b-[3px] hover:border-white-500 pb-2"
-            activeClass="border-white"
+            listClass="border-transparent border-b-[3px] hover:border-white-500 text-quartz pb-2"
+            activeClass="border-white hover:border-white text-white/[1]"
             textClass="text-sm tracking-sm md:text-base md:tracking-base"
           />
         </nav>

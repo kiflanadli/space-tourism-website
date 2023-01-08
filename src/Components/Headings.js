@@ -30,7 +30,11 @@ export function Heading4(props) {
 
 export function Heading5(props) {
   return (
-    <p className="font-barlow-condensed text-base md:text-xl lg:text-3xl tracking-3xl">
+    <p
+      className={`font-barlow-condensed text-base md:text-xl lg:text-3xl tracking-3xl ${
+        props.quartz ? "text-quartz" : ""
+      }`}
+    >
       {props.children}
     </p>
   );
@@ -42,7 +46,7 @@ export function SubHeading1(props) {
 
 export function SubHeading2(props) {
   return (
-    <p className="font-barlow-condensed text-sm tracking-sm">
+    <p className="font-barlow-condensed text-sm tracking-sm text-quartz">
       {props.children}
     </p>
   );

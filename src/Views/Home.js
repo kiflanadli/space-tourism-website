@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="text-center flex flex-col justify-around min-h-screen p-6 pt-20 bg-no-repeat bg-cover bg-home-mobile sm:bg-home-tablet md:bg-home-desktop">
       <div>
-        <Heading5>So, you want to travel to</Heading5>
+        <Heading5 quartz>So, you want to travel to</Heading5>
         <Heading1>Space</Heading1>
         <BodyText>
           Let’s face it; if you want to go to space, you might as well genuinely

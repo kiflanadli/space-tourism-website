@@ -10,7 +10,7 @@ export default function Crew() {
 
   const links = Object.keys(crew);
   const captions = crew.map((d) => (
-    <span className="w-2.5 aspect-square block"></span>
+    <span className="w-2.5 lg:w-4 aspect-square block"></span>
   ));
 
   return (
@@ -33,7 +33,7 @@ export default function Crew() {
             captions={captions}
             className="flex gap-5 justify-center"
             listClass="bg-white-200 hover:bg-white-500 rounded-full"
-            activeClass="bg-white"
+            activeClass="bg-white hover:bg-white"
             textClass="text-sm tracking-sm md:text-base md:tracking-base"
           />
         </nav>
