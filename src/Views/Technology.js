@@ -9,8 +9,13 @@ export default function Technology() {
   const technology = data.technology;
 
   const links = Object.keys(technology);
-  const captions = technology.map((d) => (
-    <span className="w-2.5 aspect-square block"></span>
+  const captions = technology.map((d, index) => (
+    <span
+      className="font-bellefair text-base md:text-2xl lg:text-4xl block"
+      key={index}
+    >
+      {index + 1}
+    </span>
   ));
 
   return (
@@ -32,8 +37,8 @@ export default function Technology() {
             linkPath="/technology/"
             captions={captions}
             className="flex gap-5 justify-center"
-            listClass="bg-white-200 hover:bg-white-500 rounded-full"
-            activeClass="bg-white"
+            listClass="bg=transparent border-2 border-white-200 hover:border-white aspect-square w-14 rounded-full flex justify-center items-center"
+            activeClass="bg-white border-white text-black-russian"
             textClass="text-sm tracking-sm md:text-base md:tracking-base"
           />
         </nav>
