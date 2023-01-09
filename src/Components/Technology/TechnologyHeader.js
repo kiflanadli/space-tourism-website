@@ -3,11 +3,11 @@ import { useWindowDimensions } from "../../Hooks/useWindowDimensions";
 export default function TechnologyHeader({ details: technology }) {
   const { width } = useWindowDimensions();
   let imgUrl =
-    width > 1024
+    width >= 1024
       ? technology.images.portrait.slice(1)
       : technology.images.landscape.slice(1);
   return (
-    <div className="my-9 mx-[-1.5rem] overflow-hidden">
+    <div className="my-9 -mx-6 overflow-hidden">
       <img
         alt="technology"
         src={imgUrl}
