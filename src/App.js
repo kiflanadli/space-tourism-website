@@ -5,7 +5,7 @@ import {
   Switch,
   useParams,
 } from "react-router-dom";
-import { MainNavigation } from "./Components/Navigation";
+import MainNavigation from "./Components/Navigation";
 import Destination from "./Views/Destination";
 import Home from "./Views/Home";
 import mainData from "./data.json";

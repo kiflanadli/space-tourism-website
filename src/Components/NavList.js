@@ -29,7 +29,7 @@ export default function NavList(props) {
           >
             <p className={`font-barlow-condensed ${textClass}`}>
               {indexIcon && (
-                <span className="font-bold mr-2 min-w-[1.3em] inline-block">
+                <span className="font-bold mr-2 min-w-[1.3em] inline-block md:max-lg:hidden">
                   0{index}
                 </span>
               )}
