@@ -6,9 +6,9 @@ export default function NavList(props) {
     activeClass = "", // custom class for active list
     captions = false, // caption name, optional
     linkPath, // root path e.g. "/"
-    className, // custom class for ul
-    listClass, // custom class for li
-    textClass, // custom class for list text
+    className = "", // custom class for ul
+    listClass = "", // custom class for li
+    textClass = "", // custom class for list text
     handleClick, // custom actions
     indexIcon = false, // 01 02 03
   } = props;
