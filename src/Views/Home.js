@@ -4,8 +4,8 @@ import { BodyText } from "../Components/Texts";
 
 export default function Home({ pageList }) {
   return (
-    <div className="text-center flex flex-col justify-around min-h-screen p-6 pt-20 bg-no-repeat bg-cover bg-home-mobile sm:bg-home-tablet md:bg-home-desktop">
-      <div>
+    <div className="text-center flex flex-col justify-around md:justify-evenly min-h-screen p-6 pt-20 bg-no-repeat bg-cover bg-home-mobile md:bg-home-tablet lg:bg-home-desktop">
+      <div className="md:min-w-min md:w-3/5 md:max-w-[768px] mx-auto">
         <Heading5 quartz>So, you want to travel to</Heading5>
         <Heading1>Space</Heading1>
         <BodyText>
@@ -17,7 +17,7 @@ export default function Home({ pageList }) {
       </div>
       <div>
         <Link to={`/${pageList[0]}`}>
-          <button className="rounded-full bg-white w-[45%] aspect-square text-black-russian uppercase text-xl tracking-[0.063rem] font-bellefair">
+          <button className="rounded-full bg-white w-[45%] md:w-1/3 aspect-square text-black-russian uppercase text-xl tracking-[0.063rem] font-bellefair">
             Explore
           </button>
         </Link>

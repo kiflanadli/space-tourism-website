@@ -13,7 +13,7 @@ export default function Destination({ mainData: { destinations } }) {
       pageData={destinations}
       Header={DestinationHeader}
       Body={DestinationBody}
-      containerClass="bg-destination-mobile sm:bg-destination-tablet md:bg-destination-desktop"
+      containerClass="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop"
       label={{ id: "01", title: "pick your destination" }}
     >
       <nav>
@@ -21,7 +21,7 @@ export default function Destination({ mainData: { destinations } }) {
           links={links}
           linkPath="/destinations/"
           captions={captions}
-          className="flex gap-5 justify-center mb-9"
+          className="flex gap-5 justify-center"
           listClass="border-transparent border-b-[3px] hover:border-white-500 text-quartz pb-2"
           activeClass="border-white hover:border-white text-white/[1]"
           textClass="text-sm tracking-sm md:text-base md:tracking-base"

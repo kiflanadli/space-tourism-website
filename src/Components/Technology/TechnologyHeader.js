@@ -7,12 +7,12 @@ export default function TechnologyHeader({ details: technology }) {
       ? technology.images.portrait.slice(1)
       : technology.images.landscape.slice(1);
   return (
-    <div className="my-9 -mx-6 overflow-hidden">
+    <section className="-mx-6 md:-mx-10 overflow-hidden">
       <img
         alt="technology"
         src={imgUrl}
         className="mx-auto h-auto w-full aspect-[2.47] lg:aspect-auto"
       />
-    </div>
+    </section>
   );
 }

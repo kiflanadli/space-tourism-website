@@ -20,7 +20,7 @@ export default function Technology({ mainData: { technology } }) {
       pageData={technology}
       Header={TechnologyHeader}
       Body={TechnologyBody}
-      containerClass="bg-technology-mobile sm:bg-technology-tablet md:bg-technology-desktop"
+      containerClass="bg-technology-mobile md:bg-technology-tablet lg:bg-technology-desktop"
       label={{ id: "03", title: "space launch 101" }}
     >
       <nav>

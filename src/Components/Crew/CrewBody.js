@@ -3,7 +3,7 @@ import { BodyText } from "../Texts";
 
 export default function CrewBody({ details: crew }) {
   return (
-    <div className="my-9">
+    <div className="md:max-w-[80%] mx-auto">
       <div className="text-white-500 mb-1">
         <Heading4>{crew.role}</Heading4>
       </div>

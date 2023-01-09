@@ -1,11 +1,11 @@
 export default function DestinationHeader({ details: destination }) {
   return (
-    <div>
+    <section>
       <img
         alt="destination"
         src={destination.images.webp.slice(1)}
-        className="mx-auto w-3/5 my-9 aspect-square"
+        className="mx-auto w-3/5 md:w-1/2 aspect-square"
       />
-    </div>
+    </section>
   );
 }

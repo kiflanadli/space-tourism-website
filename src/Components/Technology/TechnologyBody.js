@@ -3,7 +3,7 @@ import { BodyText } from "../Texts";
 
 export default function TechnologyBody({ details: technology }) {
   return (
-    <div className="my-9">
+    <div className="md:max-w-[90%] mx-auto">
       <p className="mb-3 text-quartz font-barlow-condensed text-sm tracking-sm md:text-base md:tracking-base">
         the terminology...
       </p>

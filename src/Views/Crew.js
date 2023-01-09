@@ -15,8 +15,10 @@ export default function Crew({ mainData: { crew } }) {
       pageData={crew}
       Header={CrewHeader}
       Body={CrewBody}
-      containerClass="bg-crew-mobile sm:bg-crew-tablet md:bg-crew-desktop"
+      containerClass="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop md:max-lg:flex md:max-lg:flex-col md:max-lg:justify-between"
       label={{ id: "02", title: "meet your crew" }}
+      articleClass="md:flex-col-reverse md:pb-0"
+      sectionClass="md:flex-col-reverse"
     >
       <nav>
         <NavList
