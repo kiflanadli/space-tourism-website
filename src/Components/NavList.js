@@ -23,7 +23,7 @@ export default function NavList(props) {
           to={link === "home" ? "/" : `${linkPath}${link}`}
         >
           <li
-            className={`${listClass} ${
+            className={`transition-all ${listClass} ${
               activeLink === link || page === link ? activeClass : ""
             }`}
           >

@@ -12,10 +12,12 @@ export default function PageContainer(props) {
     label,
     articleClass = "",
     sectionClass = "",
+    headerClass = "",
+    bodyClass = "",
   } = props;
   return (
     <div
-      className={`text-center p-6 pt-20 md:px-10 md:pb-0 md:pt-36 min-h-screen bg-no-repeat bg-cover ${containerClass}`}
+      className={`text-center p-6 pt-20 md:px-10 md:pb-0 md:pt-36 lg:px-32 min-h-screen bg-no-repeat bg-cover ${containerClass}`}
     >
       <div className="md:text-left">
         <Heading5>
@@ -25,17 +27,17 @@ export default function PageContainer(props) {
       </div>
 
       <article
-        className={`flex flex-col gap-9 md:gap-11 py-9 md:py-11 ${articleClass}`}
+        className={`flex flex-col lg:flex-row lg:justify-between gap-9 md:gap-11 py-9 md:py-11 ${articleClass}`}
       >
         <Switch>
           {pageData.map((d, index) => (
             <Route path={`/${page}/${index}`} key={index}>
-              <Header details={d} />
+              <Header details={d} headerClass={headerClass} />
             </Route>
           ))}
         </Switch>
         <section
-          className={`flex flex-col gap-9 md:gap-11 mx-auto md:max-w-[85%] ${sectionClass}`}
+          className={`lg:text-left flex flex-col gap-9 md:gap-11 mx-auto lg:mx-0 md:max-w-[85%] ${sectionClass}`}
         >
           {
             children // custom navigation
@@ -43,7 +45,7 @@ export default function PageContainer(props) {
           <Switch>
             {pageData.map((d, index) => (
               <Route path={`/${page}/${index}`} key={index}>
-                <Body details={d} />
+                <Body details={d} bodyClass={bodyClass} />
               </Route>
             ))}
           </Switch>

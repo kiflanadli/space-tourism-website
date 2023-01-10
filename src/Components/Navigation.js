@@ -8,16 +8,13 @@ function MainNavigation({ pageList }) {
   const { width } = useWindowDimensions();
 
   return (
-    <nav className="font-barlow-condensed fixed top-0 p-6 md:py-0 md:px-10 z-40 w-full flex justify-between items-center">
+    <nav className="font-barlow-condensed fixed top-0 p-6 md:max-lg:py-0 md:px-10 z-30 w-full flex justify-between lg:gap-10 items-center">
       <Link to="/">
-        <div>
-          <img
-            src="/assets/shared/logo.svg"
-            alt="logo"
-            className="w-10 md:w-12"
-          />
+        <div className="w-10 md:w-12">
+          <img src="/assets/shared/logo.svg" alt="logo" className="w-full" />
         </div>
       </Link>
+      <hr className="hidden lg:block border-white-200 basis-full -mr-16 relative z-50" />
       {width >= 768 || (
         <button onClick={() => setShowMenu(!showMenu)}>
           <img src="/assets/shared/icon-hamburger.svg" alt="logo" />

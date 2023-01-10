@@ -1,9 +1,9 @@
 import { Heading3 } from "../Headings";
 import { BodyText } from "../Texts";
 
-export default function TechnologyBody({ details: technology }) {
+export default function TechnologyBody({ details: technology, bodyClass }) {
   return (
-    <div className="md:max-w-[90%] mx-auto">
+    <div className={bodyClass}>
       <p className="mb-3 text-quartz font-barlow-condensed text-sm tracking-sm md:text-base md:tracking-base">
         the terminology...
       </p>
