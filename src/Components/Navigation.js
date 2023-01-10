@@ -1,11 +1,25 @@
 import NavigationMenu from "./NavigationMenu";
 import { Link } from "react-router-dom";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useWindowDimensions } from "../Hooks/useWindowDimensions";
+import { useTransition, animated } from "react-spring";
 
 function MainNavigation({ pageList }) {
   const [showMenu, setShowMenu] = useState(false);
   const { width } = useWindowDimensions();
+  const [menuTransition, transitionApi] = useTransition(showMenu, () => ({
+    from: { transform: "translateX(100%)" },
+    enter: { transform: "translateX(0%)" },
+    leave: { transform: "translateX(100%)" },
+  }));
+
+  useEffect(() => {
+    transitionApi.start();
+  }, [showMenu]);
+
+  const Menu = (
+    <NavigationMenu closeMenu={() => setShowMenu(false)} pageList={pageList} />
+  );
 
   return (
     <nav className="font-barlow-condensed fixed top-0 p-6 md:max-lg:py-0 md:px-10 z-30 w-full flex justify-between lg:gap-10 items-center">
@@ -20,12 +34,16 @@ function MainNavigation({ pageList }) {
           <img src="/assets/shared/icon-hamburger.svg" alt="logo" />
         </button>
       )}
-      {(width >= 768 || showMenu) && (
-        <NavigationMenu
-          closeMenu={() => setShowMenu(false)}
-          pageList={pageList}
-        />
-      )}
+      {width >= 768
+        ? Menu
+        : menuTransition(
+            (style, showState) =>
+              showState && (
+                <animated.div style={style} className="fixed z-40 inset-0">
+                  {Menu}
+                </animated.div>
+              )
+          )}
     </nav>
   );
 }
