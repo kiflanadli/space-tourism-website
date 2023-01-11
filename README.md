@@ -1,6 +1,6 @@
 # Space tourism website - Frontend Mentor Challenge
 
-This project is a solution for [Frontend Mentor's challenge](https://)
+This project is a solution for [Frontend Mentor's challenge]([https://](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3))
 
 ## Table of contents
 
