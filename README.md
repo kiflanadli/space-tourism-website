@@ -40,6 +40,7 @@ Users would be able to:
 
 - React js
 - Tailwind CSS
+- React router
 - React spring
 - Flexbox
 - Mobile-first workflow
